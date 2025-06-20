@@ -20,7 +20,7 @@ body {
     font-size: 5rem;
     text-align: left;
     border: none;
-    background-color: hsl(0, 0%, 20%);
+   background-color: hsl(35deg 16.14% 84.6%);
 }
 
 #keys {
@@ -40,9 +40,20 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
+   /* Digit buttons (0–9 and .) */
+    .digit-btn {
+      color: white;
+    }
+    /* Operator buttons (+, -, *, /, C) */
+    .operator-btn {
+      background-color: hsl(35, 100%, 55%);
+      color: white;
+    }
+ 
 button:hover {
     background-color: hsl(0, 0%, 40%);
 }
+
 
 button:active {
     background-color: hsl(0, 0%, 50%);
@@ -58,4 +69,3 @@ button:active {
 
 .operator-btn:active {
     background-color: hsl(35, 100%, 75%);
-}
