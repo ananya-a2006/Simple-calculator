@@ -1,71 +1,83 @@
-body {
+<style>
+  body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+    background-color: white; /* Optional: white background */
+  }
 
-#calculator {
+  #calculator {
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0%, 15%);
     border-radius: 15px;
-    max-width: 500px;
+    width: 90vw;
+    max-width: 400px;
     overflow: hidden;
-}
+  }
 
-#display {
+  #display {
     width: 100%;
-    padding: 20px;
-    font-size: 5rem;
+    padding: 1.2rem;
+    font-size: 3rem;
     text-align: left;
     border: none;
-   background-color: hsl(35deg 16.14% 84.6%);
-}
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+  }
 
-#keys {
+  #keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 25px;
-}
-button {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    gap: 0.6rem;
+    padding: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes buttons square */
+    border-radius: 50%;
     border: none;
     background-color: hsl(0, 0%, 30%);
-    color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
-}
-   /* Digit buttons (0–9 and .) */
-    .digit-btn {
-      color: white;
-    }
-    /* Operator buttons (+, -, *, /, C) */
-    .operator-btn {
-      background-color: hsl(35, 100%, 55%);
-      color: white;
-    }
- 
-button:hover {
-    background-color: hsl(0, 0%, 40%);
-}
+  }
 
+  .digit-btn {
+    color: white;
+  }
 
-button:active {
-    background-color: hsl(0, 0%, 50%);
-}
-
-.operator-btn {
+  .operator-btn {
     background-color: hsl(35, 100%, 55%);
-}
+    color: white;
+  }
 
-.operator-btn:hover {
+  .operator-btn:hover {
     background-color: hsl(35, 100%, 65%);
-}
+  }
 
-.operator-btn:active {
+  .operator-btn:active {
     background-color: hsl(35, 100%, 75%);
+  }
+
+  button:hover {
+    background-color: hsl(0, 0%, 40%);
+  }
+
+  button:active {
+    background-color: hsl(0, 0%, 50%);
+  }
+
+  /* Responsive font sizes */
+  @media (max-width: 400px) {
+    #display {
+      font-size: 2.2rem;
+    }
+
+    button {
+      font-size: 1.5rem;
+    }
+  }
+</style>
